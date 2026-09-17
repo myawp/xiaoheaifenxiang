@@ -4,29 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇳🇴 NO 01 - xiaohe
+- name: 🇹🇭 TH 01 - xiaohe
   type: vless
-  server: 46.29.238.32
-  port: 40443
-  uuid: ed91e79c-f6bf-4fba-8cc0-6d45acaec22b
+  server: 103.86.49.57
+  port: 80
+  uuid: 3c52e091-6714-4915-949f-2149fe69951b
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  reality-opts:
-    public-key: dvx6zPztKbgHpYaW6J4OZQC74Uy0JS6HUVdDfbjG5V4
-  servername: deepl.com
-  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: aIs.SpEeDtEsT.nEt
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇳🇴 NO 01 - xiaohe
+  - 🇹🇭 TH 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇳🇴 NO 01 - xiaohe
+  - 🇹🇭 TH 01 - xiaohe
 rules:
 - MATCH,PROXIES
