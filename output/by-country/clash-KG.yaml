@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇦 加拿大 (Canada) 01 (家宽) - xiaohe
+- name: 🇰🇬 KG 01 - xiaohe
   type: vless
-  server: 188.114.97.6
-  port: 2052
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  server: 172.65.90.53
+  port: 8880
+  uuid: a9fb0f8c-89e9-44ee-9574-a310c5bd259c
   udp: true
   tls: false
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /
+    path: /pyip=ProxyIP.US.CMLiussss.net
     headers:
-      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
+      Host: autumn-leaf-eefd.119-38e.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇦 加拿大 (Canada) 01 (家宽) - xiaohe
+  - 🇰🇬 KG 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇦 加拿大 (Canada) 01 (家宽) - xiaohe
+  - 🇰🇬 KG 01 - xiaohe
 rules:
 - MATCH,PROXIES
